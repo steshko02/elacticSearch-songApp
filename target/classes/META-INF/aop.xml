@@ -1,0 +1,22 @@
+<!DOCTYPE aspectj PUBLIC "-//AspectJ//DTD//EN" "http://www.eclipse.org/aspectj/dtd/aspectj.dtd">
+<aspectj>
+<weaver>
+    <include within="com.epam.elastic.aop.aspects.*" />
+    <include within="org.springframework.boot..*" />
+</weaver>
+
+<aspects>
+    <aspect name="com.epam.elastic.aop.aspects.RetryHandlerAspect" />
+</aspects>
+
+</aspectj>
+<!--<aspectj>-->
+<!--<weaver>-->
+<!--    &lt;!&ndash; only weave classes in our application-specific packages &ndash;&gt;-->
+<!--    <include within="com.epam.elastic.*"/>-->
+<!--</weaver>-->
+<!--<aspects>-->
+<!--    &lt;!&ndash; weave in just this aspect &ndash;&gt;-->
+<!--    <aspect name="com.epam.elastic.aop.aspects.RetryHandlerAspect"/>-->
+<!--</aspects>-->
+<!--</aspectj>-->
